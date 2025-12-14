@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoàng Tử Bé - Vẻ Đẹp Của Sự Giản Dị</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tải font Inter từ Google Fonts và một font chữ nghệ thuật */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+        /* Định nghĩa biến CSS tùy chỉnh cho tông màu Vũ Trụ & Tinh Tế (Hoàng Tử Bé) */
+        :root {
+            --color-star-blue: #2a3d76;   /* Xanh Sao Trời (Primary) */
+            --color-rose-pink: #f08080;   /* Hồng Hoa Hồng (Accent) */
+            --color-desert-sand: #fbf0e8; /* Cát Sa Mạc (Light Background) */
+            --color-text-dark: #333333;   /* Xám Đậm (Text Color) */
+            --color-planet-gold: #ffc400; /* Vàng Hành Tinh (Secondary Accent) */
+            --font-primary: 'Inter', sans-serif;
+            --font-secondary: 'Playfair Display', serif; /* Font nghệ thuật cho tiêu đề */
+        }
+
+        /* Áp dụng font, màu chữ và NỀN GRADIENT ỔN ĐỊNH cho toàn bộ trang */
+        body {
+            font-family: var(--font-primary);
+            color: var(--color-text-dark);
+            line-height: 1.8;
+            
+            /* NỀN GRADIENT MÔ PHỎNG BẦU TRỜI ĐÊM (GIỮ NGUYÊN) */
+            background-color: #000033; /* Màu xanh đen */
+            background-image: linear-gradient(to top, #1a2b5d 0%, #000033 70%); /* Xanh đậm lên xanh đen */
+            background-attachment: fixed; 
+            background-size: cover; 
+            background-position: center;
+        }
+
+        /* Container chính nổi bật trên nền */
+        .container-wrapper {
+            background-color: rgba(255, 255, 255, 0.95); 
+            border-top: 6px solid var(--color-star-blue); 
+        }
+
+        /* Tiêu đề chính sử dụng font nghệ thuật */
+        header h1 {
+            font-family: var(--font-secondary);
+            color: var(--color-star-blue) !important;
+            text-shadow: 1px 1px 4px rgba(42, 61, 118, 0.3); 
+        }
+
+        /* Hiệu ứng cho tiêu đề phụ */
+        h2 {
+            border-bottom: 2px solid var(--color-rose-pink); 
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Tăng cường hiệu ứng cho khối trích dẫn (<Blockquote>) */
+        blockquote {
+            transition: all 0.4s ease;
+            background-color: #fff7fa; 
+            border-left: 8px solid var(--color-planet-gold) !important; 
+            box-shadow: 0 4px 10px rgba(255, 196, 0, 0.2); 
+            border-radius: 0.25rem; 
+        }
+
+        /* Custom style cho fun fact list marker */
+        .fun-fact-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .fun-fact-list li::before {
+            content: '⭐'; /* Dùng emoji ngôi sao làm marker */
+            position: absolute;
+            left: 0;
+            color: var(--color-planet-gold);
+        }
+        
+        /* Custom style cho danh sách nhân vật */
+        .character-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--color-rose-pink); /* Viền nhỏ cho từng nhân vật */
+            padding-left: 1rem;
+            margin-left: 0.5rem;
+        }
+
+        /* Màu chữ cho tiêu đề tác phẩm */
+        .beautiful-title {
+            font-family: var(--font-secondary);
+            color: var(--color-rose-pink) !important;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* Cập nhật màu cho thẻ aside/thông tin thú vị */
+        .fun-fact {
+            border-color: var(--color-planet-gold) !important;
+            background-color: var(--color-desert-sand); 
+            box-shadow: 0 2px 8px rgba(255, 196, 0, 0.3); 
+        }
+
+        /* Cập nhật màu cho ảnh bìa */
+        .book-intro img {
+            border-color: var(--color-star-blue) !important; 
+            border-radius: 0.75rem; 
+            object-fit: contain; 
+            box-shadow: 0 10px 20px rgba(0, 0, 51, 0.3);
+        }
+        
+        /* Cảm nhận cá nhân */
+        section:nth-of-type(2) p.italic {
+             background-color: #f7f9ff; 
+             border-left-color: var(--color-rose-pink) !important; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-wrapper container mx-auto p-4 sm:p-8 shadow-2xl rounded-xl mt-8 mb-8 max-w-4xl">
+
+        <header class="text-center pb-6 mb-8 border-b-2 border-gray-300">
+            <h1 class="text-4xl sm:text-5xl font-extrabold" style="color: var(--color-star-blue);">
+                 GIỚI THIỆU TÁC PHẨM VĂN HỌC
+            </h1>
+            <p class="text-xl mt-2 italic" style="color: var(--color-text-dark);">Chủ đề: Cổ Tích Hiện Đại - Tác phẩm: Hoàng Tử Bé</p>
+        </header>
+
+        <main>
+            <section class="book-intro mb-8 flex flex-col md:flex-row items-center gap-6">
+                
+                <div class="w-full md:w-1/3 flex-shrink-0">
+                    <img 
+                        src="https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG" 
+                        alt="Ảnh bìa sách Hoàng Tử Bé" 
+                        class="w-full h-auto object-cover rounded-lg shadow-xl border-4" 
+                        style="border-color: var(--color-star-blue);"
+                    >
+                </div>
+
+                <div class="w-full md:w-2/3">
+                    <p class="beautiful-title font-bold mb-1" style="color: var(--color-rose-pink);">
+                        "HOÀNG TỬ BÉ" - ANTOINE DE SAINT-EXUPÉRY
+                    </p>
+                    <p class="text-lg"><strong>Tác giả:</strong> Antoine de Saint-Exupéry</p>
+                    <p class="text-lg mt-2"><strong>Chủ đề:</strong> Tình bạn, sự cô đơn, ý nghĩa cuộc sống, vẻ đẹp của sự giản dị và tầm quan trọng của trí tưởng tượng.</p>
+                </div>
+            </section>
+            
+            <section class="author-bio mb-8">
+                <h2 class="text-2xl font-semibold mb-4" style="color: var(--color-star-blue);">Về Tác Giả Antoine de Saint-Exupéry</h2>
+                <p class="text-justify bg-gray-50 p-4 rounded-lg border-l-4 border-gray-300">
+                    Antoine de Saint-Exupéry (1900-1944) là một nhà văn, nhà thơ và phi công người Pháp. Ông là một người hùng trong ngành hàng không tiên phong và kinh nghiệm bay lượn, đặc biệt là những chuyến bay qua sa mạc, đã truyền cảm hứng sâu sắc cho các tác phẩm của ông. **Hoàng Tử Bé** là tác phẩm nổi tiếng nhất và cuối cùng của ông trước khi ông mất tích bí ẩn trong một nhiệm vụ trinh sát trong Chiến tranh Thế giới thứ hai.
+                </p>
+            </section>
+            
+            <section class="characters mb-8">
+                <h2 class="text-2xl font-semibold mb-4" style="color: var(--color-star-blue);">Các Nhân Vật Chính</h2>
+                <ul class="character-list space-y-3 p-0 list-none">
+                    <li>
+                        <strong class="text-rose-pink">Hoàng Tử Bé (Le Petit Prince):</strong> Nhân vật chính, đến từ hành tinh B-612. Đại diện cho sự ngây thơ, trí tưởng tượng và những giá trị tinh thần đã bị người lớn lãng quên.
+                    </li>
+                    <li>
+                        <strong class="text-rose-pink">Phi Công (The Aviator):</strong> Người kể chuyện, bị rơi máy bay ở Sahara. Đại diện cho những người lớn đã mất đi sự hồn nhiên nhưng cuối cùng đã tìm lại được qua lời kể của Hoàng Tử Bé.
+                    </li>
+                    <li>
+                        <strong class="text-rose-pink">Hoa Hồng (The Rose):</strong> Bông hoa kiêu kỳ trên hành tinh của Hoàng Tử Bé. Đại diện cho tình yêu, sự gắn bó và trách nhiệm.
+                    </li>
+                    <li>
+                        <strong class="text-rose-pink">Cáo (The Fox):</strong> Người dạy Hoàng Tử Bé về ý nghĩa của tình bạn và sự "thuần hóa". Cáo là người đưa ra câu trích dẫn nổi tiếng của tác phẩm.
+                    </li>
+                </ul>
+            </section>
+
+            <article class="space-y-8 mb-8">
+                
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4" style="color: var(--color-star-blue);">Tóm Tắt Nội Dung Tác Phẩm</h2>
+                    <p class="text-justify">
+                        "Hoàng Tử Bé" là câu chuyện kể về một phi công bị rơi máy bay giữa sa mạc Sahara, nơi anh gặp một cậu bé kỳ lạ đến từ một hành tinh xa xôi – Hoàng Tử Bé. Qua những cuộc trò chuyện với Hoàng Tử Bé, phi công dần khám phá lại những giá trị đã bị lãng quên của người lớn, như **tình bạn**, **tình yêu** và ý nghĩa thực sự của cuộc sống. 
+                        Hoàng Tử Bé kể về hành trình chu du qua nhiều hành tinh, gặp gỡ những người lớn kỳ quặc và cuối cùng học được bài học quan trọng nhất từ **Cáo** (Fox): **"Điều cốt yếu thì mắt thường không nhìn thấy được"**. Câu chuyện kết thúc bằng việc cậu bé trở về hành tinh của mình, để lại nỗi nhớ vô hạn trong lòng phi công.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-4" style="color: var(--color-star-blue);">Cảm Nhận Cá Nhân</h2>
+                    <p class="text-justify italic bg-indigo-50 p-4 rounded-lg border-l-4" style="border-color: var(--color-rose-pink);">
+                        Đây không chỉ là một cuốn sách thiếu nhi mà là một triết lý sâu sắc gói gọn trong ngôn ngữ giản dị. Mỗi lần đọc lại, ta lại tìm thấy một ý nghĩa mới về trách nhiệm, về tình yêu, và về cách người lớn chúng ta đã đánh mất sự hồn nhiên, trong trẻo. "Hoàng Tử Bé" là lời nhắc nhở quý giá về việc trân trọng những điều giản dị và quan trọng nhất trong cuộc đời.
+                    </p>
+                </section>
+            </article>
+
+            <section class="quote-section mb-8">
+                <h2 class="text-2xl font-semibold mb-4" style="color: var(--color-star-blue);">Trích Dẫn Hay: </h2>
+                <blockquote class="p-6 rounded-r-xl shadow-md border-l-8 border-gray-400" style="border-color: var(--color-planet-gold);">
+                    <p class="text-xl font-medium mb-2">
+                        "Người ta chỉ nhìn rõ bằng trái tim. Điều cốt yếu thì mắt thường không nhìn thấy được."
+                    </p>
+                    <footer class="text-sm italic text-right text-gray-600">
+                        — Lời dạy nổi tiếng của Cáo dành cho Hoàng Tử Bé.
+                    </footer>
+                </blockquote>
+            </section>
+
+            <aside class="fun-fact p-6 rounded-lg border-2 border-dashed" style="border-color: var(--color-planet-gold); background-color: var(--color-desert-sand);">
+                <h2 class="text-xl font-semibold mb-4" style="color: var(--color-star-blue);">⭐ Thông Tin Thú Vị ⭐</h2>
+                <ul class="fun-fact-list text-gray-700">
+                    <li>Tác giả Antoine de Saint-Exupéry là một **phi công** ngoài đời thực; câu chuyện được lấy cảm hứng từ kinh nghiệm cá nhân của ông khi bị rơi máy bay ở sa mạc Sahara.</li>
+                    <li>"Hoàng Tử Bé" là một trong những cuốn sách được dịch sang nhiều ngôn ngữ nhất thế giới (hơn **300 ngôn ngữ và tiếng địa phương**).</li>
+                    <li>Hình ảnh **con cừu** được Hoàng Tử Bé yêu cầu vẽ trong sách là một phép ẩn dụ cho những điều không cần phải nhìn thấy mới có thể tin được.</li>
+                </ul>
+            </aside>
+        </main>
+
+        <footer class="text-center pt-6 mt-8 border-t-2 border-gray-300">
+            <p class="text-sm text-gray-500">
+                 2025 Dự Án Tin Học: Giới Thiệu Tác Phẩm Văn Học
+                 Thực hiện bởi Đinh Văn Hùng 12A2
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
